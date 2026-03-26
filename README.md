@@ -13,6 +13,7 @@ HTML
 CSS
 
 JavaScript
+
 🎮 Como jogar
 
 Abra o arquivo index.html no navegador
