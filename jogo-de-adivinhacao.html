@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo-de-adivinhação.css">
+    <title>Jogo de Adivinhação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de <span>Adivinhação</span></h1>
+        <h2>🎯 Bem-vindo ao Jogo de Adivinhação!</h2>
+
+        <p>Eu pensei em um número secreto entre <span>1 e 100...</span> será que você consegue descobrir qual é? 🤔</p>
+
+        <p>A cada tentativa, você escolhe um número:</p>
+        <ul>
+            <li>Se o seu chute for <span>menor</span> que o número secreto, eu vou te avisar ⬇️</li>
+            <li>Se for <span>maior</span>, também te aviso ⬆️</li>
+        </ul>
+
+        <p>Seu objetivo é acertar o número antes de atingir o limite <span>máximo de tentativas</span>!</p>
+
+        <p>Boa sorte e… comece a jogar! 🍀</p>
+
+        <input type="number" id="palpite" placeholder="Digite um número">
+
+        <p class="error-msg" id="erro">⚠ Por favor, digite um número de 1 a 100.</p>
+
+        <button onclick="verificarChute()">Chutar</button>
+        <button id="reiniciar" onclick="reiniciarJogo()">Jogar novamente</button>
+
+        <p id="mensagem">Faça seu primeiro chute!</p>
+        <p id="tentativas">Tentativas restantes: 10</p>
+    </div>
+    <script src="jogo-de-adivinhação.js"></script>
+</body>
+</html>

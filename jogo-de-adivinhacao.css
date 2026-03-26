@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 255, 70, 0.03) 2px,
+            rgba(0, 255, 70, 0.03) 4px
+        );
+}
+
+.container {
+    background: #0d0d0d;
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 600px;
+    width: 90%;
+    border: 1px solid #00ff46;
+    box-shadow: 0 0 30px rgba(0, 255, 70, 0.2), inset 0 0 30px rgba(0, 255, 70, 0.03);
+    text-align: center;
+    position: relative;
+}
+
+/* Efeito de canto estilo terminal */
+.container::before {
+    content: '> SISTEMA INICIADO_';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #0a0a0a;
+    color: #00ff46;
+    font-size: 0.75rem;
+    padding: 0 8px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+    color: #00ff46;
+    text-shadow: 0 0 10px rgba(0, 255, 70, 0.8);
+    margin-bottom: 24px;
+    letter-spacing: 4px;
+}
+
+h1 span {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    font-size: 0.95rem;
+    color: #00ff46;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #7a9e7a;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+p span {
+    color: #00ff46;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+li {
+    color: #7a9e7a;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #111;
+    border-left: 3px solid #00ff46;
+    font-size: 0.88rem;
+}
+
+li span {
+    color: #00ff46;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #00ff46;
+    border-radius: 2px;
+    color: #00ff46;
+    font-size: 1.1rem;
+    font-family: 'Share Tech Mono', monospace;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::placeholder {
+    color: #2a4a2a;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00ff46;
+    box-shadow: 0 0 15px rgba(0, 255, 70, 0.3);
+}
+
+button {
+    padding: 10px 28px;
+    background: transparent;
+    border: 1px solid #00ff46;
+    border-radius: 2px;
+    color: #00ff46;
+    font-size: 0.95rem;
+    font-family: 'Share Tech Mono', monospace;
+    cursor: pointer;
+    margin: 8px;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #00ff46;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(0, 255, 70, 0.5);
+}
+
+#erro {
+    display: none;
+    color: #ff3333;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.5);
+}
+
+#erro.visible {
+    display: block;
+}
+
+#mensagem {
+    font-size: 1.1rem;
+    color: #00ff46;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 30px;
+    text-shadow: 0 0 8px rgba(0, 255, 70, 0.5);
+    letter-spacing: 1px;
+}
+
+#tentativas {
+    color: #4a7a4a;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+#reiniciar {
+    display: none;
+}
+
+#reiniciar.visible {
+    display: inline-block;
+}
